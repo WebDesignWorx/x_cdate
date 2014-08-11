@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="expires" content="Fri, 22 Oct 1999 00:00:00 GMT"/>
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta name="keywords" content="HTML, Javascript, CSS, PHP, MySQL, Bielefeld, OWL, NRW, Dietrich Roland Pehlke, Bielefeld" /> 
+		<meta name="description" content="Programmierung und Grafik (PHP, MySQL, XML, Javascript, Lingo) für klein und mittelst&auml;ndische Betriebe in Bielefeld." />
+		<meta name="robots" content="index,follow" />
+		<meta name="author" content="Dietrich Roland Pehlke - Bielefeld" />
+
+		<title>Websitebaker - Modules: x_cDate</title>
+		<link href="css/default.css" rel="stylesheet" media="screen" />
+	</head>
+	<body>
+<div id="head">
+	<h1>x_cDate</h1>
+	<p class="head">Add a simple class for modifing dates to Websitebaker</p>
+	<p class="head">Version: <span class="right">0.3.0</span></p>
+	<p class="head">Date: <span class="right">2008-08-20</span></p>
+	<p class="head">Author: <span class="right">Dietrich Roland Pehlke (aldus)</span></p>
+	<p class="head">Contact: <span class="right"><a href='mailTo:websitebaker-dev@drp-x-work.de'>websitebaker-dev@drp-x-work.de</a></span></p>
+	<p class="head">State: <span class="right">@dev</span></p>
+	<p class="head">Requires: <span class="right">PHP 5.x, Websitebaker 2.7.x</span></p>
+	<p class="head">Licence: <span class="right">Licencsed under GNU</span></p>
+</div>
+<div id="content">
+	<p class="prolog">This documentation is written as it is, without any warrenties. This is not the official documentation for Websitebaker, his Tempates, Modules or Code-Snippes.</p>
+	<h2>Quick Start</h2>
+	<p class="info">After installing this modul you can use the class "c_date" by getting an instance of it. If you are using the functionality in the frontend, e.g. inside a Template, you can direct get it like:</p>
+	<p class="example">$d = new c_date();<p>
+	<p class="info">If you want to use this class in the backend, e.g. inside a modul, you are in the need of including the file first:</p>
+	<p class="example">require_once (WB_PATH."/modules/x_cdate/include.php");<br />$d = new c_date();</p>
+	<p class="info">After that you can do a couple of modifications about the format and or the date.</p>
+	<p class="example">//	setting the format<br>$d->format="%A, %d. <font style='color:#900;'>%B</font> %Y";<br /><br />// This will return the date-string in the given format.<br />//	e.g. below: 11. März 1966<br />$d->transform ("11/03/1966");</p>
+	<p class="example">// 	This will return the current time in the format.<br />$d->toHTML();</p>
+	<p class="example">//	This also<br />$d->toHTML ( TIME() );</p>
+	<p class="example">//	This will set a new Language, e.g. italy.<br />$d->setLanguage ( array ("it_IT", "italiy", "it_IT@euro") );</p>
+	<p class="example">//	This will change all dates in a given string (pass by reference!).<br />$d->parse_string ("At 30.01.1998 the new book of Mr. Unknown comes ...");</p>
+	<p class="example">//	Testing a given language-key agains the locales and optional use them.<br />//	Returns a list with all matches.<br />$all = $d->test_locale("de_AT", true);</p>
+	<p class="example">foreach ($all as $tempKey) echo "< br />".$tempKey; // will result in:</p>
+	<p class="output">de_AT<br />de_AT.ISO8859-1<br />de_AT.ISO8859-15<br />de_AT.UTF-8</p>
+	<p class="info">Dietrich Roland Pehlke - Bielefeld (ger)</p>
+</div>
+	</body>
+</html>
