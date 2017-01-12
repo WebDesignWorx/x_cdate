@@ -1,12 +1,12 @@
+## c_Date
+
 A simple class for transform/modify dates in differ formats.
 
-@version	0.4.2
-@date		2013-05-04
+@version	0.4.3
+@date		2017-01-12
 @author		Dietrich Roland Pehlke (aldus)
-@contact	websitebaker-dev@drp-x-work.de
-@package	Websitebaker - Modules: x_cDate
-@state		@dev
-
+@contact	drp@cms-lab.com
+@package	Websitebaker/WBCE/LEPTON-CMS - Modules: x_cDate@state		@dev
 @notice		Class for modify/transform/format dates.
 
 			The important class-functions/vars are:
@@ -22,7 +22,7 @@ A simple class for transform/modify dates in differ formats.
 			$d->set_wb_lang	( a_WB_languageKey );
 			$d->test_locale ( aLangKey, aBoolean );
 
-@example(-s)
+### example(-s)
 
 			//	new instance
 			$d = new c_date();
@@ -54,11 +54,27 @@ A simple class for transform/modify dates in differ formats.
 			//	installed locales and then use them
 			$d->test_locale("de_AT", true);
 
-0.4.2	2013-05-04	Add de_DE.UTF-8
-					Lepton 1.1.4 support
-0.4.1	2012-03-29	Change regEx-function inside the parse_string-function to preg_match_all.
-0.4.0	2011-06-25	Add GUID.
-0.3.0	2008-08-20	Add public function "test_locale".	
-0.2.0	2008-08-19	Add public function and constances. See file "include.php" for details.
-0.1.0	2008-08-17	First alpha run.
+#### Versions
+#### 0.4.3 - 2017-01-12
+- Bugfix for regExpr.
+- Minor textchanges inside REDME and comments.
+
+#### 0.4.2 - 2013-05-04
+- Add de_DE.UTF-8
+- Lepton 1.1.4 support
+
+#### 0.4.1 - 2012-03-29
+- Change regEx-function inside the parse_string-function to preg_match_all.
+
+#### 0.4.0 - 2011-06-25
+- Add GUID.
+
+#### 0.3.0 - 2008-08-20
+- Add public function "test_locale".	
+
+####  0.2.0 - 2008-08-19
+- Add public function and constances. See file "include.php" for details.
+
+#### 0.1.0 - 2008-08-17
+- First alpha run.
 

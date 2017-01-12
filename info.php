@@ -22,11 +22,11 @@
 *
 *	A simple class for transform/modify dates in differ formats.
 *
-*	@version	0.4.2
-*	@date		2013-05-04
+*	@version	0.4.3
+*	@date		2017-01-12
 *	@author		Dietrich Roland Pehlke (aldus)
-*	@contact	websitebaker-dev@drp-x-work.de
-*	@package	Websitebaker - Modules: x_cDate
+*	@contact	drp@cms-lab.com
+*	@package	Websitebaker/WBCE/LEPTON-CMS - Modules: x_cDate
 *	@state		@dev
 *
 *	@notice		Class for modify/transform/format dates.
@@ -54,29 +54,31 @@
 *
 *				// This will return the date-string in the given format.
 *				//	e.g. below: 11. März 1966
-*				$d->transform ("11/03/1966");
+*				$d->transform("11/03/1966");
 *
 *				// 	This will return the current time in the format
 *				$d->toHTML();
 *
 *				//	This also
-*				$d->toHTML ( TIME() );
+*				$d->toHTML( TIME() );
 *
 *				//	This will set a new Language, e.g. italy
-*				$d->setLanguage ( array ("it_IT", "italiy", "it_IT@euro") );
+*				$d->setLanguage( array ("it_IT", "italiy", "it_IT@euro") );
 *
 *				//	This will change all dates in a given string (pass by reference!).
-*				$d->parse_string ("At 30.01.98 the new book of Mr. Unknown comes ...");
+*				$str = "At 30.01.98 the new book of Mr. Unknown comes ...";
+*				$d->parse_string( $str );
 *
 *				//	For the use in Websitebaker you can use "set_wb_lang".
 *				//	Supported values at this time are: DE, EN, NL, IT, FR
-*				$d->set_wb_lang ( LANGUAGE );
+*				$d->set_wb_lang( LANGUAGE );
 *
 *				//	This one will look for a languagekey inside all
 *				//	installed locales and then use them
 *				$d->test_locale("de_AT", true);
 *
 *	0.4.3	2017-01-12	Bugfix for regExpr.
+*						Minor textchanges inside REDME and comments.
 *
 *	0.4.2	2013-05-04	Add de_DE.UTF-8
 *						Lepton 1.1.4 support
