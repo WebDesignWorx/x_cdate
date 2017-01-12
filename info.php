@@ -76,6 +76,8 @@
 *				//	installed locales and then use them
 *				$d->test_locale("de_AT", true);
 *
+*	0.4.3	2017-01-12	Bugfix for regExpr.
+*
 *	0.4.2	2013-05-04	Add de_DE.UTF-8
 *						Lepton 1.1.4 support
 *
@@ -94,7 +96,7 @@
 $module_directory   = "x_cdate";
 $module_name        = "x_cDate";
 $module_function    = "snippet";
-$module_version     = "0.4.2";
+$module_version     = "0.4.3";
 $module_platform    = defined("LEPTON_GUID") ? "1.1.4" : "2.8.x";
 $module_author      = "Dietrich Roland Pehlke (aldus).";
 $module_license     = "Licencsed under GNU";
