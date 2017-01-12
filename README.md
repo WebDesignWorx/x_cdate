@@ -2,12 +2,12 @@
 
 A simple class for transform/modify dates in differ formats.
 
-@version	0.4.3
-@date		2017-01-12
-@author		Dietrich Roland Pehlke (aldus)
-@contact	drp@cms-lab.com
-@package	Websitebaker/WBCE/LEPTON-CMS - Modules: x_cDate@state		@dev
-@notice		Class for modify/transform/format dates.
+- version	0.4.3
+- date		2017-01-12
+- author		Dietrich Roland Pehlke (aldus)
+- contact	drp@cms-lab.com
+- package	Websitebaker/WBCE/LEPTON-CMS - Modules: x_cDate@state		@dev
+- notice		Class for modify/transform/format dates.
 
 			The important class-functions/vars are:
 
