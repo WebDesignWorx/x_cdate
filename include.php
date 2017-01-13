@@ -19,8 +19,8 @@
  *	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
  *
- *	@version	0.4.3
- *	@date		2017-01-12
+ *	@version	0.4.4
+ *	@date		2017-01-13
  *	@author		Dietrich Roland Pehlke (aldus)
  *	@contact	drp@cms-lab.com
  *	@package	Websitebaker/WBCE/LEPTON-CMS - Modules: x_cDate
@@ -306,9 +306,10 @@ if (!class_exists('c_date')) {
 		 *					default is "dd.mm.yyyy" e.g. 11.03.1966
 		 *
 		 */
-		public function parse_string (&$aStr = "", $aPattern = "/.*([0-3][0-9].[0-1][0-9].[0-9]{2,4}).*/" ) {
+		public function parse_string (&$aStr = "", $aPattern = "/([0-3][0-9].[01][0-9].[0-9]{2,4})/s" ) {
 			$found=array();
 			preg_match_all($aPattern, $aStr, $found );
+			echo LEPTON_tools::display( $found , "pre", "ui message");
 			foreach ($found[1] as $a) {
 				$aStr = str_replace($a, $this->transform($a), $aStr);
 			}
