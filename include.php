@@ -306,10 +306,9 @@ if (!class_exists('c_date')) {
 		 *					default is "dd.mm.yyyy" e.g. 11.03.1966
 		 *
 		 */
-		public function parse_string (&$aStr = "", $aPattern = "/([0-3][0-9].[01][0-9].[0-9]{2,4})/s" ) {
+		public function parse_string (&$aStr = "", $aPattern = "/([0-3][0-9].[01]{0,1}[0-9].[0-9]{2,4})/s" ) {
 			$found=array();
 			preg_match_all($aPattern, $aStr, $found );
-			echo LEPTON_tools::display( $found , "pre", "ui message");
 			foreach ($found[1] as $a) {
 				$aStr = str_replace($a, $this->transform($a), $aStr);
 			}
