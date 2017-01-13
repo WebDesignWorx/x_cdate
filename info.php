@@ -22,8 +22,8 @@
 *
 *	A simple class for transform/modify dates in differ formats.
 *
-*	@version	0.4.3
-*	@date		2017-01-12
+*	@version	0.4.4
+*	@date		2017-01-13
 *	@author		Dietrich Roland Pehlke (aldus)
 *	@contact	drp@cms-lab.com
 *	@package	Websitebaker/WBCE/LEPTON-CMS - Modules: x_cDate
@@ -77,8 +77,10 @@
 *				//	installed locales and then use them
 *				$d->test_locale("de_AT", true);
 *
+*	0.4.4	2017-01-13	Bugfix for regExpr. for more than one hits inside a string.
+*
 *	0.4.3	2017-01-12	Bugfix for regExpr.
-*						Minor textchanges inside REDME and comments.
+*						Minor textchanges inside README and comments.
 *
 *	0.4.2	2013-05-04	Add de_DE.UTF-8
 *						Lepton 1.1.4 support
@@ -98,7 +100,7 @@
 $module_directory   = "x_cdate";
 $module_name        = "x_cDate";
 $module_function    = "snippet";
-$module_version     = "0.4.3";
+$module_version     = "0.4.4";
 $module_platform    = defined("LEPTON_GUID") ? "1.1.4" : "2.8.x";
 $module_author      = "Dietrich Roland Pehlke (aldus).";
 $module_license     = "Licencsed under GNU";
